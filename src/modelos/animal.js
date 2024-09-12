@@ -11,6 +11,18 @@ class Animal {
     this.defineBioma(especie);
   }
 
+  getEspecie() {
+    return this.#especie;
+  }
+
+  getTamanho() {
+    return this.#tamanho;
+  }
+
+  getBioma(){
+    return this.#bioma
+  }
+
   validaEspecieAnimal(especie) {
     const especiesValidas = [
       "LEAO",
