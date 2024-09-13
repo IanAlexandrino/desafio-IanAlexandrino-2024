@@ -4,11 +4,13 @@ class Animal {
   #especie;
   #tamanho;
   #bioma;
+  #qtd;
 
-  constructor(especie) {
+  constructor(especie, qtd) {
     this.validaEspecieAnimal(especie);
     this.defineTamanho(especie);
     this.defineBioma(especie);
+    this.#qtd = qtd;
   }
 
   getEspecie() {
@@ -19,8 +21,12 @@ class Animal {
     return this.#tamanho;
   }
 
-  getBioma(){
-    return this.#bioma
+  getBioma() {
+    return this.#bioma;
+  }
+
+  getQtd() {
+    return this.#qtd;
   }
 
   validaEspecieAnimal(especie) {
@@ -60,6 +66,10 @@ class Animal {
     } else if (especie === "HIPOPOTAMO") {
       this.#bioma = ["savana", "rio"];
     }
+  }
+
+  aumentaQuantidade(qtd) {
+    this.#qtd += qtd;
   }
 }
 
